@@ -10,7 +10,9 @@ import UIKit
 
 class ViewController: UIViewController {
     var temp = 0
+    var ap = 0
     @IBOutlet var window: UITextField!
+    
     @IBAction func one(_ sender: Any) {
         window.text = window.text!+"1"
     }
@@ -42,7 +44,53 @@ class ViewController: UIViewController {
         window.text = window.text!+"0"
     }
     @IBAction func and(_ sender: Any) {
-        
+        temp = Int(window.text!)!
+        window.text = ""
+        ap = 1
+    }
+    @IBAction func minus(_ sender: Any) {
+        temp = Int(window.text!)!
+        window.text = ""
+        ap = 2
+    }
+    @IBAction func equal(_ sender: Any) {
+        if(ap == 1){
+            var sum = 0
+            sum = temp + Int(window.text!)!
+            window.text = "\(sum)"
+        }
+        if(ap == 2){
+            var sums = 0
+            sums = temp - Int(window.text!)!
+            window.text = "\(sums)"
+        }
+        if(ap == 3){
+            var sumss = 0
+            sumss = temp - Int(window.text!)!
+            window.text = "\(sumss)"
+        }
+        if(ap == 4){
+            var sumsss = 0
+            sumsss = temp - Int(window.text!)!
+            window.text = "\(sumsss)"
+        }
+    }
+    @IBAction func ride(_ sender: Any) {
+        temp = Int(window.text!)!
+        window.text = ""
+        ap = 3
+    }
+    @IBAction func get(_ sender: Any) {
+        temp = Int(window.text!)!
+        window.text = ""
+        ap = 4
+    }
+    @IBAction func dian(_ sender: Any) {
+        window.text =
+        window.text!+"."
+    }
+    @IBAction func `return`(_ sender: Any) {
+        window.text = ""
     }
     override func viewDidLoad() {
         super.viewDidLoad()
