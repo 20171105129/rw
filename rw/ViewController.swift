@@ -66,12 +66,12 @@ class ViewController: UIViewController {
         }
         if(ap == 3){
             var sumss = 0
-            sumss = temp - Int(window.text!)!
+            sumss = temp * Int(window.text!)!
             window.text = "\(sumss)"
         }
         if(ap == 4){
             var sumsss = 0
-            sumsss = temp - Int(window.text!)!
+            sumsss = temp / Int(window.text!)!
             window.text = "\(sumsss)"
         }
     }
