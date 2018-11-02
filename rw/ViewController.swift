@@ -12,7 +12,6 @@ class ViewController: UIViewController {
     var temp = 0
     var ap = 0
     @IBOutlet var window: UITextField!
-    
     @IBAction func one(_ sender: Any) {
         window.text = window.text!+"1"
     }
@@ -54,22 +53,26 @@ class ViewController: UIViewController {
         ap = 2
     }
     @IBAction func equal(_ sender: Any) {
-        if(ap == 1){
+        if(ap == 1)
+        {
             var sum = 0
             sum = temp + Int(window.text!)!
             window.text = "\(sum)"
         }
-        if(ap == 2){
+        if(ap == 2)
+        {
             var sums = 0
             sums = temp - Int(window.text!)!
             window.text = "\(sums)"
         }
-        if(ap == 3){
+        if(ap == 3)
+        {
             var sumss = 0
             sumss = temp * Int(window.text!)!
             window.text = "\(sumss)"
         }
-        if(ap == 4){
+        if(ap == 4)
+        {
             var sumsss = 0
             sumsss = temp / Int(window.text!)!
             window.text = "\(sumsss)"
@@ -92,6 +95,7 @@ class ViewController: UIViewController {
     @IBAction func `return`(_ sender: Any) {
         window.text = ""
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
