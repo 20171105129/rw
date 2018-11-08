@@ -89,13 +89,15 @@ class ViewController: UIViewController {
         ap = 4
     }
     @IBAction func dian(_ sender: Any) {
-        window.text =
+        window.text = ""
         window.text!+"."
     }
     @IBAction func `return`(_ sender: Any) {
         window.text = ""
     }
-    
+    @IBAction func AC(_ sender: Any) {
+        temp = Int(window.text!)!
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
