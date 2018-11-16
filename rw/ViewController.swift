@@ -154,6 +154,7 @@ class ViewController: UIViewController {
             temm = (temm * Double(window.text!)!)
             window.text = "\(temm)"
         }
+        temm = Double(window.text!)!
         ap = 3
         seeagain = 2
     }
@@ -162,6 +163,7 @@ class ViewController: UIViewController {
             temm = (temm / Double(window.text!)!)
             window.text = "\(temm)"
         }
+        temm = Double(window.text!)!
         ap = 4
         seeagain = 2
     }
