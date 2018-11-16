@@ -9,7 +9,6 @@
 import UIKit
 
 class ViewController: UIViewController {
-    var temp = 0
     var temm = 0.00
     var ap = 0
     var seeagain = 0
@@ -115,52 +114,61 @@ class ViewController: UIViewController {
        
     }
     @IBAction func minus(_ sender: Any) {
-        temp = Int(window.text!)!
-        window.text = ""
+        if(ap == 2){
+            temm = (temm - Double(window.text!)!)
+            window.text = "\(temm)"
+        }
+        temm = Double(window.text!)!
         ap = 2
         seeagain = 2
     }
     @IBAction func equal(_ sender: Any) {
         if(ap == 1)
         {
-            var sum = 0
-            sum = temp + Int(window.text!)!
-            window.text = "\(sum)"
+            var sum1 = 0.00
+            sum1 = temm + Double(window.text!)!
+            window.text = "\(sum1)"
         }
         if(ap == 2)
         {
-            var sums = 0
-            sums = temp - Int(window.text!)!
-            window.text = "\(sums)"
+            var sum2 = 0.00
+            sum2 = temm - Double(window.text!)!
+            window.text = "\(sum2)"
         }
         if(ap == 3)
         {
-            var sumss = 0
-            sumss = temp * Int(window.text!)!
-            window.text = "\(sumss)"
+            var sum3 = 0.00
+            sum3 = temm * Double(window.text!)!
+            window.text = "\(sum3)"
         }
         if(ap == 4)
         {
-            var sumsss = 0
-            sumsss = temp / Int(window.text!)!
-            window.text = "\(sumsss)"
+            var sum4 = 0.00
+            sum4 = temm / Double(window.text!)!
+            window.text = "\(sum4)"
         }
          seeagain = 2
     }
     @IBAction func ride(_ sender: Any) {
-        temp = Int(window.text!)!
-        window.text = ""
+        if(ap == 3){
+            temm = (temm * Double(window.text!)!)
+            window.text = "\(temm)"
+        }
         ap = 3
         seeagain = 2
     }
     @IBAction func get(_ sender: Any) {
-        temp = Int(window.text!)!
-        window.text = ""
+        if(ap == 4){
+            temm = (temm / Double(window.text!)!)
+            window.text = "\(temm)"
+        }
         ap = 4
         seeagain = 2
     }
     @IBAction func AC(_ sender: Any) {
         window.text = ""
+        ap = 0
+        temm = 0
         seeagain = 0
     }
     override func viewDidLoad() {
